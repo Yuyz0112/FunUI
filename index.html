@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;text/html">
+        <title>FunUI Components</title>
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>FunUI Components</h1>
+            <p>FunUI是一个轻量级、可定制且高度解耦的UI组件库。</p>
+            <br>
+            <div class="col-7 left" id="article">
+                <h2>顶部导航</h2>
+                <p>FunUI - Nav: 页面滚动到一定高度后，导航相对页面固定。包括动效二级菜单及伸缩式搜索框。</p>
+                <div class="nav">
+                    <div class="first-row">
+                        <span>首页</span>
+                        <span>一级菜单</span>
+                    </div>
+                    <div class="second-row">
+                        <ul>
+                            <li><span>二级菜单</span></li>
+                            <li><span>二级菜单</span></li>
+                            <li><span>二级菜单</span></li>
+                            <li><span>二级菜单</span></li>
+                        </ul>
+                    </div>
+                    <div id="form">
+                        <i class="fa fa-search"></i>
+                        <form role="search" method="get" class="search-form" action="http://www.funyuchina.com/">
+                        <fieldset><input type="search" id="search" placeholder="搜索..." value="" name="s"></fieldset>
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <h2>首页侧边菜单</h2>
+                <p>FunUI - Elevator: 放置在首页内容区域左侧，位置相对页面固定，用于快速抵达目标内容区域。</p>
+                <p>整合首页的Back-to-top功能。</p>
+                <br>
+                <h2>内容页侧边目录</h2>
+                <p>FunUI - Title-list: 内容页根据header标签自动生成侧边目录。点击可到达指定子标题。</p>
+                <p>整合内容页的Back-to-top功能。</p>
+                <br>
+                <h2>评价</h2>
+                <p>FunUI - Star-rank: 内容页中实现打分功能，依赖后台MySqL数据库。</p>
+                <p>
+                    <span class="star-rank">
+                        <i class="fa"></i>
+                        <i class="fa"></i>
+                        <i class="fa"></i>
+                        <i class="fa"></i>
+                        <i class="fa"></i>
+                    </span>
+                </p>
+                <p>颜色、图案、数量及大小可定制：</p>
+                <p style="font-size:30px;color:#dd5c29;">
+                    <span>
+                        <i class="fa fa-heart"></i>
+                        <i class="fa fa-heart"></i>
+                        <i class="fa fa-heart"></i>
+                        <i class="fa fa-heart-o"></i>
+                    </span>
+                </p>
+                <br>
+                <h2>分享按钮组</h2>
+                <p>FunUI - Share-group: 动画收缩、展开分享按钮组。</p>
+                <span class="share-group">
+                    <span class="share-btn"><i class="fa fa-share-alt"></i></span>
+                    <span class="wechat"><i class="fa fa-wechat"></i></span>
+                    <span class="weibo"><i class="fa fa-weibo"></i></span>
+                    <span class="Qzone"><i class="fa fa-qq"></i></span>
+                </span>
+                <br>
+                <h2>Loading 图案</h2>
+                <p>FunUI - loading: 纯CSS3的Loading图案，易于改变样式及复用。</p>
+                <div class="loading">
+                    <div class="funyu-logo">
+                      <div class="bubbles">
+                        <div class="bubble1"></div>
+                        <div class="bubble2"></div>
+                        <div class="bubble3"></div>
+                      </div>
+                      <div class="fish-body animated rubberBand">
+                        <div class="arc arc1"></div>
+                        <div class="arc arc2"></div>
+                        <div class="arc arc3"></div>
+                        <div class="arc arc4"></div>
+                        
+                        <div class="fish-eye"></div>
+                        <div class="chopsticks">
+                          <div class="stick1">
+                            <div class="circle"></div>
+                            <div class="rect"></div>
+                          </div>
+                          <div class="stick2">
+                            <div class="circle"></div>
+                            <div class="rect"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 right">
+                <!--FunUI Title-list*-->
+                <div class="title-list"></div>
+            </div>
+        </div>
+        
+        <!--FunUI Elevator-->
+        <div class="elevator">
+            <ul>
+                <li>游戏</li>
+                <li>影视</li>
+                <li>综艺</li>
+                <li>动漫</li>
+                <li>文学</li>
+                <li>艺术</li>
+                <li><i class="fa fa-chevron-up"></i></li>
+            </ul>
+        </div>
+        <script src="http://www.funyuchina.com/statics/js/funyu/jquery-1.7.1.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

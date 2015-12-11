@@ -1,0 +1,563 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	font-family: Arial, "Microsoft Yahei";
+	line-height: 1.5;
+	color: #212121;
+}
+h1 {
+	text-align: center;
+}
+.container {
+	max-width: 1170px;
+	min-height: 1500px;
+	width: 100%;
+	padding: 30px;
+	margin: 0 auto;
+	background: #f1f3f5;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.col-7 {
+	width: 70%;
+}
+.col-3 {
+	width: 30%;
+}
+
+/*FunUI Nav*/
+.nav {
+	width: 100%;
+	height: 36px;
+	position: relative;
+}
+.nav .first-row{
+	width: 100%;
+	height: 36px;
+	background: #dd5c29;
+	position: relative;
+	z-index: 9;
+}
+.nav .first-row span{
+	display: inline-block;
+	line-height: 36px;
+	font-weight: bold;
+	color: #fff;
+	padding: 0 10px;
+	border-right: 1px solid #b6b6b6;
+	cursor: pointer;
+	float: left;
+	font-size: 16px;
+}
+.nav .first-row span:hover, .nav .second-row span:hover{
+	background: #fff;
+	color: #dd5c29;
+}
+.nav .second-row{
+	width: 100%;
+	height: 27px;
+	background: #ffc482;
+	position: absolute;
+	z-index: 7;
+	top: 8px;
+}
+.nav .second-row ul{
+	/*display: none;*/
+}
+.nav .second-row li{
+	list-style: none;
+	float: left;
+}
+.nav .second-row span{
+	display: inline-block;
+	line-height: 27px;
+	font-weight: bold;
+	color: #A44726;
+	padding: 0 10px;
+	cursor: pointer;
+	font-size: 14px;
+}
+#form *{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  outline: 0px;
+}
+#form fieldset{
+  min-width: -webkit-min-content;
+}
+.nav .fa-search{
+  position: absolute;
+  top: 0.4em;
+  left: 12px;
+  font-size: 16px;
+  color: #fff;
+}
+#form {
+  border-radius: 30px;
+  padding: 5px 20px;
+  width: 13px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 9;
+  height: 20px;
+  right: 0%;
+  top:3px;
+  -webkit-transition: width .55s ease;
+  -moz-transition: width .55s ease;
+  -ms-transition: width .55s ease;
+  -o-transition: width .55s ease;
+  transition: width .55s ease;
+}
+#form input {
+  width: 0px;
+  height: 20px;
+  font-size: 15px;
+  margin-left: 30px;  
+  line-height: 20px;
+}
+#form:hover {
+  background-color: white;
+  width: 230px;
+}
+#form:hover .fa-search{
+  color: #212121;
+}
+#form:hover form input {
+  width: 230px;
+}
+#form form input:focus, 
+#form form input:active{
+  outline:none;
+  width: 270px;
+}
+.navbar-collapse .search-form {
+  position: absolute;
+  top: 0%;
+}
+
+/*FunUI Elevator*/
+.elevator {
+	width: 3em;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.elevator ul {
+	list-style: none;
+}
+.elevator li {
+	display: block;
+	border-bottom: 2px dotted #b6b6b6;
+	padding: 5px 0;
+	cursor: pointer;
+	text-align: center;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+}
+.elevator li:hover {
+	background-color: #dd5c29;
+	color: #fff;
+}
+
+/*FunUI Title-list*/
+.title-list {
+	position: fixed;
+	right: 0;
+}
+.title-list li {
+	list-style: none;
+	position: relative;
+	margin: 0.5em 0;
+	padding: 0 0.5em;
+	cursor: pointer;
+	border-radius: 0 0.5em 0.5em 0;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+}
+.title-list li:hover, .title-list li.cur {
+	background-color: #dd5c29;
+	color: #fff;
+}
+.title-list li:before {
+	content: "";
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	position: absolute;
+	left: -1.5em;
+	margin-top: 0.25em;
+	border: 2px solid #dd5c29;
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+
+/*FunUI Star-rank*/
+.star-rank i {
+	cursor: pointer;
+}
+
+/*FunUI Share-group*/
+section {
+	width: 100%;
+	padding: 50px;
+	min-height: 200px;
+}
+.btn-float {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	display: inline-block;
+	border: none;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.11);
+}
+.btn-float:hover {
+	text-decoration: none;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 4px 15px rgba(0, 0, 0, 0.13);
+}
+.btn-float:active, .btn-float:focus {
+	outline: none;
+}
+.btn-float + .btn-float {
+	margin-left: 5px;
+}
+.yellow {
+	background: #ffa000;
+}
+.blue {
+	background: #40c4ff;
+}
+.green {
+	background: #00e676;
+}
+.purple {
+	background: #8e24aa;
+}
+.pink {
+	background: #e91e63;
+}
+
+.share-group{
+	display: inline-block;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin-left:400px;
+}
+.share-group span{
+	display: inline-block;
+	position: absolute;
+	bottom:0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 25px;
+	border-radius: 50%;
+	cursor: pointer;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.share-group span:hover{
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 4px 15px rgba(0, 0, 0, 0.13);
+}
+.share-btn{
+	background: #dd5c29;
+	z-index: 2;
+}
+.wechat{
+	background: #00e676;
+	z-index: 1;
+}
+.weibo{
+	background: #ffa000;
+	z-index: 1;
+}
+.Qzone{
+	background: #40c4ff;
+	z-index: 1;
+}
+
+/*FunUI Loading*/
+/*
+@keyframes horizonal {
+	0% { transform: translate3d(150%, 0, 0) }
+	8% { transform: translate3d(200%, 0, 0) }
+	22% { transform: translate3d(-75%, 0, 0) }
+	35% { transform: translate3d(200%, 0, 0) }
+	42% { transform: translate3d(-100%, 0, 0) }
+	50% { transform: translate3d(-300%, 0, 0) }
+	57% { transform: translate3d(165%, 0, 0) }
+	72% { transform: translate3d(330%, 0, 0) }
+	80% { transform: translate3d(-50%, 0, 0) }
+	93% { transform: translate3d(-375%, 0, 0) }
+	100% { transform: translate3d(150%, 0, 0) }
+}
+@-webkit-keyframes horizonal {
+	% { -webkit-transform: translate3d(150%, 0, 0) }
+	8% { -webkit-transform: translate3d(200%, 0, 0) }
+	22% { -webkit-transform: translate3d(-75%, 0, 0) }
+	35% { -webkit-transform: translate3d(200%, 0, 0) }
+	42% { -webkit-transform: translate3d(-100%, 0, 0) }
+	50% { -webkit-transform: translate3d(-300%, 0, 0) }
+	57% { -webkit-transform: translate3d(165%, 0, 0) }
+	72% { -webkit-transform: translate3d(330%, 0, 0) }
+	80% { -webkit-transform: translate3d(-50%, 0, 0) }
+	93% { -webkit-transform: translate3d(-375%, 0, 0) }
+	100% { -webkit-transform: translate3d(150%, 0, 0) }
+}
+*/
+.loading{
+	width: 150px;
+	height: 150px;
+	margin:0 auto;
+	animation: horizonal 30s 0s ease-in-out infinite;
+	-webkit-animation: horizonal 30s 0s ease-in-out infinite;
+}
+.funyu-logo {
+	width: 150px;
+	height: 150px;
+	margin: 50px auto;
+	position: relative;
+	background: #f1f3f5;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.bubbles{
+	width: 50%;
+	height: 50%;
+	left: -15%;
+	top: 20%;
+	position: relative;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.bubble1,.bubble2,.bubble3{
+	border-radius: 50%;
+	background: #dd5c29;
+	position: absolute;
+}
+.bubble1{
+	width: 8%;
+	height: 8%;
+	left: 25%;
+	top: 65%;
+}
+.bubble2{
+	width: 14%;
+	height: 14%;
+	left: 17%;
+	top: 38%;
+}
+.bubble3{
+	width: 11%;
+	height: 11%;
+	left: 35%;
+	top: 22%;
+}
+.fish-body {
+	width: 60%;
+	height: 60%;
+	background: #dd5c29;
+	top: 20%;
+	left: 20%;
+	position: absolute;
+	border-radius: 20%;
+	z-index: 2;
+}
+.fish-eye{
+	width: 10%;
+	height: 10%;
+	background: #f1f3f5;
+	top: 75%;
+	left: 15%;
+	position: absolute;
+	border-radius: 50%;
+}
+.chopsticks{
+	width: 100%;
+	height: 100%;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.stick1{
+	width: 10%;
+	height: 50%;
+	position: absolute;
+	left: 92%;
+	top: 40%;
+}
+.stick1 .circle{
+	width: 100%;
+	height: 20%;
+	border-radius: 50%;
+	background: #f1f3f5;
+	margin-bottom: -50%;
+}
+.stick1 .rect{
+	width: 100%;
+	height: 80%;
+	background: #f1f3f5;
+}
+.stick2{
+	width: 10%;
+	height: 100%;
+	position: absolute;
+	left: 72%;
+	top: 15%;
+}
+.stick2 .circle{
+	width: 100%;
+	height: 10%;
+	border-radius: 50%;
+	background: #f1f3f5;
+	margin-bottom: -50%;
+}
+.stick2 .rect{
+	width: 100%;
+	height: 90%;
+	background: #f1f3f5;
+}
+.arc{
+	width: 16.7%;
+	height: 80%;
+	background: #dd5c29;
+	position: absolute;
+	border-radius: 100% / 100%;
+	z-index: 0
+}
+.arc1 {
+	top: 10%;
+	left: -3%;
+}
+.arc2 {
+	top: 56%;
+	left: 42%;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.arc3 {
+	top: 10%;
+	left: 87%;
+	background: #dd5c29
+}
+.arc4 {
+	top: -35%;
+	left: 42%;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+}
+.bubbles > div { -webkit-animation: bouncedelay 1.4s infinite ease-in-out; animation: bouncedelay 1.4s infinite ease-in-out;  /* Prevent first frame from flickering when animation starts */ -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+.bubbles .bubble1 { -webkit-animation-delay: -1s; animation-delay: -1s; }
+.bubbles .bubble2 { -webkit-animation-delay: -0.5s; animation-delay: -0.5s; }
+@-webkit-keyframes bouncedelay {
+	0%, 80%, 100% { -webkit-transform: scale(0.0) }
+	40% { -webkit-transform: scale(1.0) }
+}
+@keyframes bouncedelay {
+	0%, 80%, 100% { transform: scale(0.0)}
+	40% { transform: scale(1.0)}
+}
