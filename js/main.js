@@ -108,7 +108,6 @@ function makeTitleList(container, title, width) {
 				if ($(window).scrollTop() >= positionArr[i - 1] && $(window).scrollTop() < positionArr[i]) {
 					$('.title-list li').eq(i - 1).addClass('cur');
 				}
-				if ($(window).scrollTop() < positionArr[0]) {};
 				if ($(window).scrollTop() > positionArr[title.length - 1]) {
 					$('.title-list li').eq(title.length - 1).addClass('cur');
 				}
