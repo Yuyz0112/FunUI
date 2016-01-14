@@ -41,6 +41,16 @@
                 <h2>首页侧边菜单</h2>
                 <p>FunUI - Elevator: 放置在首页内容区域左侧，位置相对页面固定，用于快速抵达目标内容区域。</p>
                 <p>整合首页的Back-to-top功能。</p>
+                <p>加入拖拽排序功能，通过拖拽侧边栏，下方demo中的区块会重新排序。</p>
+                <h3>DEMO:</h3>
+                <div class="formatWrapper">
+                    <div class="format-item" data-role='Item 1' style="background:#1ABC9C">游戏区块</div>
+                    <div class="format-item" data-role='Item 2' style="background:#2ECC71">影视区块</div>
+                    <div class="format-item" data-role='Item 3' style="background:#3498DB">综艺区块</div>
+                    <div class="format-item" data-role='Item 4' style="background:#9B59B6">动漫区块</div>
+                    <div class="format-item" data-role='Item 5' style="background:#34495E">文学区块</div>
+                    <div class="format-item" data-role='Item 6' style="background:#E74C3C">艺术区块</div>
+                </div>
                 <br>
                 <h2>内容页侧边目录</h2>
                 <p>FunUI - Title-list: 内容页根据header标签自动生成侧边目录。点击可到达指定子标题。</p>
@@ -114,16 +124,19 @@
         
         <!--FunUI Elevator-->
         <div class="elevator">
-            <ul>
-                <li>游戏</li>
-                <li>影视</li>
-                <li>综艺</li>
-                <li>动漫</li>
-                <li>文学</li>
-                <li>艺术</li>
-                <li><i class="fa fa-chevron-up"></i></li>
+            <ul class="exclude controller">
+                <li class="control-item" data-role="Item 1">游戏</li>
+                <li class="control-item" data-role="Item 2">影视</li>
+                <li class="control-item" data-role="Item 3">综艺</li>
+                <li class="control-item" data-role="Item 4">动漫</li>
+                <li class="control-item" data-role="Item 5">文学</li>
+                <li class="control-item" data-role="Item 6">艺术</li>
+                <li id="sort" class="disabled"><i class="fa fa-info-circle"></i></li>
+                <li class="disabled"><i class="fa fa-chevron-up"></i></li>
             </ul>
         </div>
+        <div id="mask"></div>
+        <div id="tips"></div>
         <script src="http://www.funyuchina.com/statics/js/funyu/jquery-1.7.1.min.js"></script>
         <script src="js/main.js"></script>
     </body>
