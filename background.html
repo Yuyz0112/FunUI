@@ -1,163 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible"content="IE=edge;text/html">
-<title>Background smooth changing</title>
-<meta name="renderer"content="webkit">
-<meta name="viewport"content="width=device-width, initial-scale=1.0">
-<style>
-* {
-	margin: 0;
-	padding: 0;
-}
-html, body {
-	width: 100%;
-	height: 100%;
-}
-table {
-	width: 100%;
-	height: 300px;
-	background: #76f0d1;
-	color: #212121;
-	text-shadow: 0 0 3px #000;
-}
-section {
-	display: block;
-	width: 100%;
-	height: 600px;
-	background: #f1f3f5;
-	padding-top: 20px;
-	position: relative;
-}
-section:after{
-	content: '';
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	opacity: 0;
-	z-index: 1;
-	transition: 1s;
-	-webkit-transition: 1s;
-}
-section.cur:after{
-	opacity:1;
-}
-#section1:after {
-	background: url(http://www.myriptide.com/wordpress/wp-content/uploads/2016/01/chiffon6.jpg) center center no-repeat;
-}
-#section2:after {
-	background: url(http://www.myriptide.com/wordpress/wp-content/uploads/2015/12/wallhaven-280757.jpg) center center no-repeat;
-}
-#section3:after {
-	background: url(http://www.myriptide.com/wordpress/wp-content/uploads/2015/12/tgbox.jpg) center center no-repeat;
-}
-#section4:after {
-	background: url(http://www.myriptide.com/wordpress/wp-content/uploads/2015/11/22.jpg) center center no-repeat;
-}
-#section5:after {
-	background: url(http://www.myriptide.com/wordpress/wp-content/uploads/2015/12/wallhaven-280757.jpg) center center no-repeat;
-}
-.block {
-	width: 1200px;
-	height: 580px;
-	margin: 0 auto;
-	background: #fff;
-	transition: 0.5s;
-	-webkit-transition: 0.5s;
-	position: relative;
-	z-index: 3;
-}
-.block:hover {
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35), 0 4px 15px rgba(0, 0, 0, 0.33);
-}
-.block h1 {
-	text-align: center;
-	display: block;
-	height: 580px;
-	line-height: 580px;
-}
-</style>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"content="IE=edge;text/html">
+	<title>Background smooth changing</title>
+	<meta name="renderer"content="webkit">
+	<meta name="viewport"content="width=device-width, initial-scale=1.0">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		html, body {
+			width: 100%;
+			height: 100%;
+			font-family:Arial,"Microsoft Yahei";
+		}
+		#table {
+			width: 100%;
+			height: 300px;
+			background: #76f0d1;
+			color: #212121;
+			text-shadow: 0 0 3px #000;
+		}
+		section {
+			display: block;
+			width: 100%;
+			height: 600px;
+			background: #f1f3f5;
+			padding-top: 20px;
+			position: relative;
+		}
+		section:after{
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			opacity: 0;
+			z-index: 1;
+			transition: 2s;
+			-webkit-transition: 2s;
+		}
+		section.cur:after{
+			opacity:1;
+		}
+		#section1:after {
+			background: url(http://www.myriptide.com/wordpress/wp-content/uploads/2016/01/chiffon6.jpg) center center no-repeat;
+		}
+		#section2:after {
+			background: url(http://www.myriptide.com/wordpress/wp-content/uploads/2015/12/wallhaven-280757.jpg) center center no-repeat;
+		}
+		#section3:after {
+			background: url(http://www.myriptide.com/wordpress/wp-content/uploads/2015/12/tgbox.jpg) center center no-repeat;
+		}
+		#section4:after {
+			background: url(http://www.myriptide.com/wordpress/wp-content/uploads/2015/11/22.jpg) center center no-repeat;
+		}
+		#section5:after {
+			background: url(http://www.myriptide.com/wordpress/wp-content/uploads/2015/12/wallhaven-280757.jpg) center center no-repeat;
+		}
+		.container{
+			width:1200px;
+			margin:0 auto;
+		}
+		.block {
+			width: 780px;
+			height: 580px;
+			background: #fff;
+			position: relative;
+			z-index: 3;
+			float:left;
+			transition: 0.5s;
+			-webkit-transition: 0.5s;
+		}
+		.block:hover {
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35), 0 4px 15px rgba(0, 0, 0, 0.33);
+		}
+		.block h1 {
+			text-align: center;
+			display: block;
+			height: 580px;
+			line-height: 580px;
+		}
+		.right-column{
+			height:100%;
+			width:353px;
+			background:#fff;
+			top:320px;
+			position:fixed;
+			z-index:3;
+		}
+		.accordion{
+			width:100%;
+			height:10%;
+			background:#fff;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35), 0 4px 15px rgba(0, 0, 0, 0.33);
+			box-sizing: border-box;
+			border-bottom: 1px solid #111;
+			text-align:center;
+			cursor:pointer;
+			transition: 0.5s;
+			-webkit-transition: 0.5s;
+			
+		}
+		.accordion table{
+			width:100%;
+			height:100%;
+		}
+		.accordion.cur{
+			height:70%;
+			background:#eee;
+			box-shadow: 0 5px 10px rgba(237, 84, 32, 0.35), 0 4px 15px rgba(237, 84, 32, 0.33);
+			width:373px;
+			margin-left:-10px;
+		}
+		</style>
 </head>
 <body>
-<table>
-<tbody>
-<tr>
-<td style="vertical-align:middle;text-align:center">
-<h1>Header part</h1>
-</td>
-</tr>
-</tbody>
-</table>
-<section id="section1">
-<div class="block">
-<h1>block1</h1>
-</div>
-</section>
-<section id="section2">
-<div class="block">
-<h1>block2</h1>
-</div>
-</section>
-<section id="section3">
-<div class="block">
-<h1>block3</h1>
-</div>
-</section>
-<section id="section4">
-<div class="block">
-<h1>block4</h1>
-</div>
-</section>
-<section id="section5">
-<div class="block">
-<h1>block5</h1>
-</div>
-</section>
-<script src="http://www.funyuchina.com/statics/js/funyu/jquery-1.7.1.min.js"></script>
-<script>
-$(function() {
-	var positionArr = new Array;
-	var section = $('section');
-	var gap = $(window).height()/4;
-	console.log(gap)
-	for (var i = 0;
-	i < section.length;
-
-	i++) {
-		positionArr.push(section.eq(i).offset().top - gap);
-	}
-	console.log(positionArr)
-	var Timer = null;
-
-	$(window).on('scroll', function() {
-		if (Timer) {
-			clearTimeout(Timer)
-		}
-		Timer = setTimeout(function() {
-			section.removeClass('cur');
+	<table id="table">
+		<tbody>
+			<tr>
+				<td style="vertical-align:middle;text-align:center">
+					<h1>Header part</h1>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="right-column">
+		<div class="accordion">
+			<table>
+				<tbody>
+					<tr>
+						<td style="vertical-align:middle;text-align:center">
+							<h3>泛娱生态圈</h3>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="accordion cur">
+			<table>
+				<tbody>
+					<tr>
+						<td style="vertical-align:middle;text-align:center">
+							<h3>泛娱IP推荐</h3>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="accordion">
+			<table>
+				<tbody>
+					<tr>
+						<td style="vertical-align:middle;text-align:center">
+							<h3>新闻TOP10</h3>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="accordion">
+			<table>
+				<tbody>
+					<tr>
+						<td style="vertical-align:middle;text-align:center">
+							<h3>推荐图片</h3>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<section id="section1">
+		<div class="container">
+			<div class="block">
+				<h1>block1</h1>
+			</div>
+		</div>
+	</section>
+	<section id="section2">
+		<div class="container">
+			<div class="block">
+				<h1>block2</h1>
+			</div>
+		</div>
+	</section>
+	<section id="section3">
+		<div class="container">
+			<div class="block">
+				<h1>block3</h1>
+			</div>
+		</div>
+	</section>
+	<section id="section4">
+		<div class="container">
+			<div class="block">
+				<h1>block4</h1>
+			</div>
+		</div>
+	</section>
+	<section id="section5">
+		<div class="container">
+			<div class="block">
+				<h1>block5</h1>
+			</div>
+		</div>
+	</section>
+	<script src="http://www.funyuchina.com/statics/js/funyu/jquery-1.7.1.min.js"></script>
+	<script>
+		$(function() {
+			var positionArr = new Array;
+			var section = $('section');
+			var gap = $(window).height()/4;
+			var leftPos = $('.block').offset().left + 837;
+			$('.right-column').css('left',leftPos);
 			for (var i = 0;
 			i < section.length;
-
 			i++) {
-				if ($(window).scrollTop() >= positionArr[i - 1] && $(window).scrollTop() < positionArr[i]) {
-					section.eq(i - 1).addClass('cur');
-				}
-				if ($(window).scrollTop() > positionArr[section.length - 1]) {
-					section.eq(title.length - 1).addClass('cur');
-				}
+				positionArr.push(section.eq(i).offset().top - gap);
 			}
-			;
-		}
-		, 30)
-	}
-	)
-}
-)
-</script>
+			var Timer = null;
+			$(window).on('scroll', function() {
+				if (Timer) {
+					clearTimeout(Timer)
+				}
+				Timer = setTimeout(function() {
+					section.removeClass('cur');
+					for (var i = 0;i < section.length;i++) {
+						if ($(window).scrollTop() >= positionArr[i - 1] && $(window).scrollTop() < positionArr[i]) {
+							section.eq(i - 1).addClass('cur');
+						}
+						if ($(window).scrollTop() > positionArr[section.length - 1]) {
+							section.eq(title.length - 1).addClass('cur');
+						}
+					}
+					if ($('body').scrollTop() >= 320) {
+						$('.right-column').css('top',0);
+					}else{
+						$('.right-column').css('top',320-$('body').scrollTop());
+					}
+				}, 30)
+			})
+			$('.accordion').click(function(){
+				$('.accordion').removeClass('cur');
+				$(this).addClass('cur');
+			})
+		})
+	</script>
 </body>
 </html>
