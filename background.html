@@ -118,18 +118,85 @@
 			width:373px;
 			margin-left:-10px;
 		}
+		.banner { position: relative; overflow: auto; width:100%; height:300px;}
+		.banner li { list-style: none; width:100%; height:300px;float: left;}
+		.banner .dots {
+		  position: absolute;
+		  left: 0;
+		  right: 0;
+		  bottom: 0px;
+		}
+		.banner .dots li {
+		  width: 100px;
+		  height: 10px;
+		  background: rgb(234, 137, 115);
+		  float: left;
+		  text-indent: -999em;
+		  display: inline-block;
+		  cursor: pointer;
+		}
+		.banner .dots li:not(:last-child) {
+		  border-right: 1px solid #e0e5e8;
+		}
+		.banner .dots li.active {
+		  background: #e25837;
+		}
+		#spinner{
+			position:absolute;
+			top:0;
+			left:0;
+			width:100px;
+			height:100px;
+			transition: 0.5s;
+			-webkit-transition: 0.5s;
+		}
+		#spinner img{
+			width:100%;
+			height:100%;
+		}
+		#spinner.action1{
+			transform:rotate(90deg);
+			-webkit-transform:rotate(90deg);
+		}
+		#spinner.action2{
+			transform:rotate(180deg);
+			-webkit-transform:rotate(180deg);
+		}
+		#spinner.action3{
+			transform:rotate(270deg);
+			-webkit-transform:rotate(270deg);
+		}
+		#spinner.action4{
+			transform:rotate(360deg);
+			-webkit-transform:rotate(360deg);
+		}
+		</style>
+		<link rel="stylesheet" href="css/unslider.css">
+		<link rel="stylesheet" href="css/unslider-dots.css">
+		<style>
+			.unslider-nav ol li.unslider-active {
+			    background: #212121;
+			    cursor: default;
+			}
+			.unslider-nav ol li {
+				border:2px solid #212121;
+			}
 		</style>
 </head>
 <body>
-	<table id="table">
-		<tbody>
-			<tr>
-				<td style="vertical-align:middle;text-align:center">
-					<h1>Header part</h1>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+	<header>
+		<div class="banner">
+		    <ul>
+		        <li style="background: url(http://www.myriptide.com/wordpress/wp-content/uploads/2016/01/chiffon6.jpg)"></li>
+		        <li style="background: url(http://www.myriptide.com/wordpress/wp-content/uploads/2015/12/wallhaven-280757.jpg)"></li>
+		        <li style="background: url(http://www.myriptide.com/wordpress/wp-content/uploads/2015/12/tgbox.jpg)"></li>
+		        <li style="background: url(http://www.myriptide.com/wordpress/wp-content/uploads/2015/11/22.jpg)"></li>
+		    </ul>
+		</div>
+	</header>
+	<div id="spinner">
+		<img src="img/1.png">
+	</div>
 	<div class="right-column">
 		<div class="accordion">
 			<table>
@@ -212,6 +279,7 @@
 		</div>
 	</section>
 	<script src="http://www.funyuchina.com/statics/js/funyu/jquery-1.7.1.min.js"></script>
+	<script src="http://www.funyuchina.com/v2/lab/js/unslider-min.js"></script>
 	<script>
 		$(function() {
 			var positionArr = new Array;
@@ -250,6 +318,14 @@
 				$('.accordion').removeClass('cur');
 				$(this).addClass('cur');
 			})
+			var slider = $('.banner').unslider({
+				autoplay: true,
+				speed: 500,
+				delay: 3000
+			});
+			slider.on('unslider.change', function(event, index, slide) {
+				$('#spinner').removeClass().addClass('action'+index);
+			});
 		})
 	</script>
 </body>
